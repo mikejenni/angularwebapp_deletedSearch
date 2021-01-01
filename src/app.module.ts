@@ -9,6 +9,10 @@ import { FirstComponent } from './components/first/first.component';
 import { SecondComponent } from './components/second/second.component';
 import { HttpComponent } from './components/http/http.component';
 import { AllmoviesComponent } from './components/allmovies/allmovies.component';
+import { PopmoviesComponent } from './components/popmovies/popmovies.component';
+import { FavmoviesComponent } from './components/favmovies/favmovies.component';
+import { BestmoviesComponent } from './components/bestmovies/bestmovies.component';
+import { ReleasemoviesComponent } from './components/releasemovies/releasemovies.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +20,11 @@ import { AllmoviesComponent } from './components/allmovies/allmovies.component';
     FirstComponent,
     SecondComponent,
     HttpComponent,
-    AllmoviesComponent
+    AllmoviesComponent,
+    PopmoviesComponent,
+    FavmoviesComponent,
+    BestmoviesComponent,
+    ReleasemoviesComponent
   ],
   imports: [
     BrowserModule,

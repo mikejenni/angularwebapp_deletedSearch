@@ -2,20 +2,16 @@ import { Component, OnInit } from '@angular/core';
 import {MoviesResponse} from '../../models/Movies';
 import {MoviesService} from '../../services/movies/movies.service';
 
-
 @Component({
-  selector: 'app-allmovies',
-  templateUrl: './allmovies.component.html',
-  styleUrls: ['./allmovies.component.scss']
+  selector: 'app-popmovies',
+  templateUrl: './popmovies.component.html',
+  styleUrls: ['./popmovies.component.scss']
 })
-export class AllmoviesComponent implements OnInit {
-  rows: any[] = [];
-  tests: any[] = []; 
- 
+export class PopmoviesComponent implements OnInit {
+
+  rows: any[] = []; 
   constructor(private moviesService: MoviesService) {
-    this.rows = this.multiArray;    
-    this.tests = this.moviesService;        
-    
+    this.rows = this.multiArray;        
    }
   moviesResponse: MoviesResponse;
   multiArray = [

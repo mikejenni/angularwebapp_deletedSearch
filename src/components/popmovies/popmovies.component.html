@@ -1,6 +1,6 @@
 <div class="app-component">
     <div class="component-header">
-      <h3>Movies</h3>
+      <h3>Poplar Movies</h3>
 
     </div>
     <button class="btn btn-outline-dark" (click)="loadMovies()">Load Movies</button>
@@ -9,13 +9,8 @@
       {{moviesResponse.total_results}}
       <div >     
     </div>
-    <table>
-      <tr *ngFor="let test of tests; let i = index">    
-        <td *ngFor="let cell of test; let i = index">        
-              <b>{{ cell.cellValue }} editable</b>        
-        </td>
-      </tr>  
-    </table>
+
+
     </div>
   </div>
   <table>
