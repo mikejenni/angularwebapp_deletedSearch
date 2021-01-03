@@ -11,6 +11,8 @@ import { FavmoviesComponent } from './components/favmovies/favmovies.component';
 import { BestmoviesComponent } from './components/bestmovies/bestmovies.component';
 import { ReleasemoviesComponent } from './components/releasemovies/releasemovies.component';
 import { SearchmoviesComponent } from './components/searchmovies/searchmovies.component';
+import { GenresComponent } from './components/genres/genres.component';
+import { MovieComponent } from './components/movie/movie.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { SearchmoviesComponent } from './components/searchmovies/searchmovies.co
     FavmoviesComponent,
     BestmoviesComponent,
     ReleasemoviesComponent,
-    SearchmoviesComponent
+    SearchmoviesComponent,
+    GenresComponent,
+    MovieComponent
   ],
   imports: [
     BrowserModule,

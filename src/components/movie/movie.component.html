@@ -1,0 +1,12 @@
+<div class="app-component">
+    <div class="component-header">
+      <h3>Movie Detail</h3>
+    </div>
+
+    <div style="margin-top: 20px" *ngIf="movieResponse">
+        <h1>{{movieResponse.title}}</h1> 
+        <p>Homepage: {{movieResponse.homepage}}</p>
+        <p>Spielzeit: {{movieResponse.runtime}}</p>
+    </div>
+
+ </div>

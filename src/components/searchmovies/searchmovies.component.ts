@@ -11,18 +11,20 @@ export class SearchmoviesComponent implements OnInit {
 
   constructor(private searchMoviesService: SearchMoviesService) { 
   }
-
  searchMoviesResponse: SearchMoviesResponse;
  posterpath = "https://image.tmdb.org/t/p/w500/";
 
+ test = 'dsds';
+ log = '';
 
+ logText(value: string): void {
+   this.log += `Text changed to '${value}'\n`;
+ }
  ngOnInit(): void {
  }
 
- searchMovies(): void {
-  this.searchMoviesService.getSearchMovies()
-     .subscribe((data: SearchMoviesResponse) => this.searchMoviesResponse = { ...data});
+ searchMovies(value: string): void {
+  this.searchMoviesService.getSearchMovies(this.log = value)
+       .subscribe((data: SearchMoviesResponse) => this.searchMoviesResponse = { ...data});
  }
-
-
 }
