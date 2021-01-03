@@ -22,13 +22,18 @@
             <li><a routerLink="/popmovies-component" class="dropdown-item" routerLinkActive="active">Populäre Filme</a></li>
             <li><a routerLink="/releasemovies-component" class="dropdown-item" routerLinkActive="active">Neue Filme</a></li>
             <li><a routerLink="/bestmovies-component" class="dropdown-item" routerLinkActive="active">Beste Filme</a></li>
+            <li><a routerLink="/searchmovies-component" class="dropdown-item" routerLinkActive="active">Suche Filme</a></li>
+
           </ul>
         </li>
       </ul>
       <form class="d-flex">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
+        <button class="btn btn-outline-success" (click)="searchMovies()">Search</button>
       </form>
+
+
+
     </div>
   </div>
 </nav>
@@ -36,7 +41,6 @@
 </div>
 
 
-<app-bestmovies></app-bestmovies>
 
 
 <router-outlet></router-outlet>

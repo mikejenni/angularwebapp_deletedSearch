@@ -1,7 +1,9 @@
 <div class="app-component">
     <div class="component-header">
-      <h3>Beste Filme</h3>
+      <h3>Suche Filme</h3>
     </div>
+    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="inputText" [(ngModel)]="query">
+    <button class="btn btn-outline-success" (click)="searchMovies()">Search</button>
 
     <div style="margin-top: 20px" *ngIf="searchMoviesResponse">
       {{searchMoviesResponse.results.push()}}
@@ -10,10 +12,9 @@
 
         <div *ngFor="let movie of searchMoviesResponse.results; let i = index" class="col-sm-3 mb-4">    
           <div class="card">
-            <img [src]="posterpath + movie.poster_path" class="card-img-top" >
+            <img [src]="posterpath + movie.logo_path" class="card-img-top" >
             <div class="card-body">
-              <h5 class="card-title">{{movie.title}}</h5>
-              <p class="card-text"><i>{{movie.release_date}}</i></p>
+              <h5 class="card-title">{{movie.name}}</h5>
               <a href="#" class="btn btn-primary mr-2">Details</a>
               <a href="#" class="btn btn-primary">Favoriten</a>
             </div>

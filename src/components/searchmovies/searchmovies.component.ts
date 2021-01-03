@@ -12,12 +12,17 @@ export class SearchmoviesComponent implements OnInit {
   constructor(private searchMoviesService: SearchMoviesService) { 
   }
 
-searchMoviesResponse: SearchMoviesResponse;
+ searchMoviesResponse: SearchMoviesResponse;
  posterpath = "https://image.tmdb.org/t/p/w500/";
 
+
  ngOnInit(): void {
-   this.searchMoviesService.getSearchMovies()
+ }
+
+ searchMovies(): void {
+  this.searchMoviesService.getSearchMovies()
      .subscribe((data: SearchMoviesResponse) => this.searchMoviesResponse = { ...data});
  }
+
 
 }

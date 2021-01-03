@@ -1,27 +1,4 @@
 <div class="app-component">
-    <div class="component-header">
-      <h3>Poplar Movies</h3>
-
-    </div>
-    <button class="btn btn-outline-dark" (click)="loadMovies()">Load Movies</button>
-    <div style="margin-top: 20px" *ngIf="popMoviesResponse">
-      {{popMoviesResponse.results.push()}}
-      {{popMoviesResponse.total_results}}
-      <div >     
-    </div>
-
-
-    </div>
-  </div>
-  <table>
-  <tr *ngFor="let row of rows; let i = index">    
-    <td *ngFor="let cell of row; let i = index">        
-          <b>{{ cell.cellValue }} editable</b>        
-    </td>
-  </tr>  
-</table>
-
-<div class="app-component">
   <div class="component-header">
     <h3>Populäre Filme</h3>
   </div>
@@ -36,7 +13,7 @@
           <img [src]="posterpath + movie.poster_path" class="card-img-top" >
           <div class="card-body">
             <h5 class="card-title">{{movie.title}}</h5>
-            <p class="card-text"><i>{{movie.release_date}}</i></p>
+            <p class="card-text"><i>{{movie.release_date | date :'dd. MMM yyyy'}}</i></p>
             <a href="#" class="btn btn-primary mr-2">Details</a>
             <a href="#" class="btn btn-primary">Favoriten</a>
           </div>
