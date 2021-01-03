@@ -1,1 +1,26 @@
-<p>releasemovies works!</p>
+<div class="app-component">
+  <div class="component-header">
+    <h3>Neue Filme</h3>
+  </div>
+
+  <div style="margin-top: 20px" *ngIf="releaseMoviesResponse">
+    {{releaseMoviesResponse.results.push()}}
+    {{releaseMoviesResponse.total_results}}
+    <div class="row">
+
+      <div *ngFor="let movie of releaseMoviesResponse.results; let i = index" class="col-sm-3">    
+        <div class="card">
+          <img [src]="posterpath + movie.poster_path" class="card-img-top" >
+          <div class="card-body">
+            <h5 class="card-title">{{movie.title}}</h5>
+            <p class="card-text"><i>{{movie.release_date}}</i></p>
+            <a href="#" class="btn btn-primary mr-2">Details</a>
+            <a href="#" class="btn btn-primary">Favoriten</a>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+</div>

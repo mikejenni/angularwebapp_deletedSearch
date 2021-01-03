@@ -1,14 +1,14 @@
 <div class="app-component">
     <div class="component-header">
-      <h3>Movies</h3>
+      <h3>Beste Filme</h3>
     </div>
 
-    <div style="margin-top: 20px" *ngIf="moviesResponse">
-      {{moviesResponse.results.push()}}
-      {{moviesResponse.total_results}}
+    <div style="margin-top: 20px" *ngIf="searchMoviesResponse">
+      {{searchMoviesResponse.results.push()}}
+      {{searchMoviesResponse.total_results}}
       <div class="row">
 
-        <div *ngFor="let movie of moviesResponse.results; let i = index" class="col-sm-3 mb-4">    
+        <div *ngFor="let movie of searchMoviesResponse.results; let i = index" class="col-sm-3 mb-4">    
           <div class="card">
             <img [src]="posterpath + movie.poster_path" class="card-img-top" >
             <div class="card-body">
@@ -22,5 +22,5 @@
         
       </div>
     </div>
-
+    
  </div>

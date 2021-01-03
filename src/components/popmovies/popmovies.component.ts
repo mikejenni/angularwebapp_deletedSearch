@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {MoviesResponse} from '../../models/Movies';
-import {MoviesService} from '../../services/movies/movies.service';
+import {PopMoviesResponse} from '../../models/PopMovies';
+import {PopMoviesService} from '../../services/popmovies/popmovies.service';
 
 @Component({
   selector: 'app-popmovies',
@@ -10,11 +10,13 @@ import {MoviesService} from '../../services/movies/movies.service';
 export class PopmoviesComponent implements OnInit {
 
   rows: any[] = []; 
-  constructor(private moviesService: MoviesService) {
+  constructor(private moviesService: PopMoviesService) {
     this.rows = this.multiArray;        
    }
-  moviesResponse: MoviesResponse;
-  multiArray = [
+   popMoviesResponse: PopMoviesResponse;
+   posterpath = "https://image.tmdb.org/t/p/w500/";
+   
+   multiArray = [
     //row 1
     [
       {cellValue:'row1 col1', cellId: 1},
@@ -36,8 +38,8 @@ export class PopmoviesComponent implements OnInit {
   }
 
   loadMovies(): void {
-    this.moviesService.getMovies()
-      .subscribe((data: MoviesResponse) => this.moviesResponse = { ...data});
+    this.moviesService.getPopMovies()
+      .subscribe((data: PopMoviesResponse) => this.popMoviesResponse = { ...data});
   }
 
 }
