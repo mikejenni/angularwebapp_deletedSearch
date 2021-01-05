@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {FavMoviesResponse} from '../../models/FavMovies';
+import {FavMoviesResponse, Result} from '../../models/FavMovies';
 import {FavMoviesService} from '../../services/favmovies/favmovies.service';
+import {HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'app-favmovies',
@@ -8,9 +9,10 @@ import {FavMoviesService} from '../../services/favmovies/favmovies.service';
   styleUrls: ['./favmovies.component.scss']
 })
 export class FavmoviesComponent implements OnInit {
- 
-  constructor(private favMoviesService: FavMoviesService) { 
+
+  constructor(private favMoviesService: FavMoviesService) {
    }
+
 
    favMoviesResponse: FavMoviesResponse;
   posterpath = "https://image.tmdb.org/t/p/w500/";
@@ -19,5 +21,7 @@ export class FavmoviesComponent implements OnInit {
     this.favMoviesService.getFavMovies()
       .subscribe((data: FavMoviesResponse) => this.favMoviesResponse = { ...data});
   }
-  
+
+
+
 }

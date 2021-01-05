@@ -5,10 +5,11 @@ export interface FavMoviesResponse {
     total_pages: number;
     total_results: number;
    }
-   
-   
-   
-   export interface Result {
+
+
+
+export interface Result {
+     _id?: string;
      adult: boolean;
      backdrop_path: string;
      genre_ids: number[];
@@ -24,4 +25,3 @@ export interface FavMoviesResponse {
      vote_average: number;
      vote_count: number;
    }
-   
