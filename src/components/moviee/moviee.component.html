@@ -1,0 +1,11 @@
+<div class="card">
+  <img [src]="posterpath + movie.poster_path" class="card-img-top" >
+  <div class="card-body">
+    <h5 class="card-title">{{movie.title}}</h5>
+    <p class="card-text"><i>{{movie.release_date | date :'dd. MMM yyyy'}}</i></p>
+    <a href="#" class="btn btn-primary mr-2">Details</a>
+    <button (click) ="addToFavorites(movie)" class="btn btn-primary">{{ addToFavoritesButton }}</button>
+    <button (click)="deleteFavorite(movie)">x</button>
+
+  </div>
+</div>
