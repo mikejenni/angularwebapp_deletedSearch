@@ -10,7 +10,6 @@ import { PopmoviesComponent } from './components/popmovies/popmovies.component';
 import { FavmoviesComponent } from './components/favmovies/favmovies.component';
 import { BestmoviesComponent } from './components/bestmovies/bestmovies.component';
 import { ReleasemoviesComponent } from './components/releasemovies/releasemovies.component';
-import { SearchmoviesComponent } from './components/searchmovies/searchmovies.component';
 import { GenresComponent } from './components/genres/genres.component';
 import { MovieComponent } from './components/movie/movie.component';
 import { MovieeComponent } from './components/moviee/moviee.component';
@@ -23,7 +22,6 @@ import { MovieeComponent } from './components/moviee/moviee.component';
     FavmoviesComponent,
     BestmoviesComponent,
     ReleasemoviesComponent,
-    SearchmoviesComponent,
     GenresComponent,
     MovieComponent,
     MovieeComponent

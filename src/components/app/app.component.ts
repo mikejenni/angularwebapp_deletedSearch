@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'routing-app';
+
+  // tslint:disable-next-line:typedef
+  searchMovies() {
+
+  }
 }

@@ -8,7 +8,6 @@ import { BestmoviesComponent } from './components/bestmovies/bestmovies.componen
 import { PopmoviesComponent } from './components/popmovies/popmovies.component';
 import { ReleasemoviesComponent } from './components/releasemovies/releasemovies.component';
 import { FavmoviesComponent } from './components/favmovies/favmovies.component';
-import { SearchmoviesComponent } from './components/searchmovies/searchmovies.component';
 import { GenresComponent } from './components/genres/genres.component';
 import { MovieComponent } from './components/movie/movie.component';
 
@@ -23,7 +22,6 @@ const routes: Routes = [ // sets up routes constant where you define your routes
   { path: 'popmovies-component', component: PopmoviesComponent },
   { path: 'releasemovies-component', component: ReleasemoviesComponent },
   { path: 'favmovies-component', component: FavmoviesComponent },
-  { path: 'searchmovies-component', component: SearchmoviesComponent },
   { path: 'genres-component', component: GenresComponent },
   { path: 'movie-component', component: MovieComponent },
 
