@@ -4,8 +4,6 @@
     <h5 class="card-title">{{movie.title}}</h5>
     <p class="card-text"><i>{{movie.release_date | date :'dd. MMM yyyy'}}</i></p>
     <a href="#" class="btn btn-primary mr-2">Details</a>
-    <button (click) ="addToFavorites(movie)" class="btn btn-primary">{{ addToFavoritesButton }}</button>
-    <button (click)="deleteFavorite(movie)">x</button>
-
+    <button (click) ="addToFavorites()" class="btn btn-primary">{{ isFavorite ? 'Remove from favorite' : 'Add to favorite' }}</button>
   </div>
 </div>

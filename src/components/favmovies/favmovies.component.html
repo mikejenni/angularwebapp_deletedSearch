@@ -3,16 +3,13 @@
       <h3>Favoriten Filme</h3>
     </div>
 
-    <div style="margin-top: 20px" *ngIf="favMoviesResponse">
-      {{favMoviesResponse.results.push()}}
-      {{favMoviesResponse.total_results}}
+    <div style="margin-top: 20px" *ngIf="favList">
       <div class="row">
-
-        <div *ngFor="let movie of favMoviesResponse.results; let i = index" class="col-sm-3 mb-4">
+        <div *ngFor="let movie of favList; let i = index" class="col-sm-3 mb-4">
           <app-moviee [movie]="movie"></app-moviee>
         </div>
-
       </div>
     </div>
 
- </div>
+</div>
+
